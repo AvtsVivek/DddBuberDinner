@@ -1,4 +1,4 @@
-﻿using BuberDinner.Application.Interfaces.Authentication;
+﻿using BuberDinner.Application.Common.Interfaces.Authentication;
 
 namespace BuberDinner.Application.Services.Authentication;
 public class AuthenticationService: IAuthenticationService
