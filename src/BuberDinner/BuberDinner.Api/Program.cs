@@ -1,4 +1,5 @@
-﻿using BuberDinner.Application;
+﻿using BuberDinner.Api.Middleware;
+using BuberDinner.Application;
 using BuberDinner.Application.Services.Authentication;
 using BuberDinner.Infrastructure;
 
@@ -17,7 +18,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 {
-
+    app.UseMiddleware<ErrorHandlingMiddleware>();
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {
