@@ -3,9 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BuberDinner.Api.Controllers;
 
+[ApiExplorerSettings(IgnoreApi = true)]
 public class ErrorsController : ControllerBase
 {
-    [Route("/error")]
+    [Route("error")]
     public IActionResult Error()
     {
         var exception = HttpContext.Features.Get<IExceptionHandlerFeature>()?.Error;
